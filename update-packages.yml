@@ -1,0 +1,9 @@
+---
+- name: Update all packages to latest version
+  hosts: all
+  become: yes
+  tasks:
+    - name: Ensure all packages are up to date
+      dnf:
+        update_cache: yes
+
